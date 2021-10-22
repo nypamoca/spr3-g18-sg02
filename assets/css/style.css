@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,
+button {
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --offcanvas-width: 270px;
+    --topNavbarHeight: 56px;
+}
+
+.sidebar-nav {
+    width: var(--offcanvas-width);
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-link .right-icon {
+    display: inline-flex;
+}
+
+.sidebar-link[aria-expanded="true"] .right-icon {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 992px) {
+    body {
+        overflow: auto !important;
+    }
+    main {
+        margin-left: var(--offcanvas-width);
+    }
+    /* this is to remove the backdrop */
+    .offcanvas-backdrop::before {
+        display: none;
+    }
+    .sidebar-nav {
+        -webkit-transform: none;
+        transform: none;
+        visibility: visible !important;
+        height: calc(100% - var(--topNavbarHeight));
+        top: var(--topNavbarHeight);
+    }
+}
+
+body {
+    background-color: #dee2e6
+}
+
+.card-1 {
+    border: darkblue;
+    border-radius: 20px;
+    width: 90%;
+    background-color: #fff
+}
+
+.icons i {
+    margin-left: 20px
+}
+
+#single-form {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 160px auto 0;
+    padding: 40px;
+    color: #858b8e;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+#single-form h2 {
+    padding-bottom: 20px;
+    margin: 10px 20px;
+    font-size: 24px;
+}
+
+#single-form hr {
+    margin-top: 38px;
+    margin-bottom: 54px;
+    margin-left: 3px;
+    border: 1px solid #cccccc;
+}
+
+#single-form .form-group {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 30%;
+    float: left;
+    text-align: left;
+}
+
+#single-form .form-control {
+    padding: 12px 20px;
+    height: auto;
+    border-radius: 2px;
+}
+
+#single-form .radio-inline {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#single-form .gender {
+    width: 30%;
+    margin-top: 30px;
+    padding-left: 20px padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#single-form .btn {
+    width: 46%;
+    margin: 20px auto 0;
+    display: block;
+    outline: none;
+}
+
+@media screen and (max-width: 800px) {
+    #single-form .form-group {
+        width: 45%;
+    }
+    #single-form {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #single-form .form-group {
+        width: 100%;
+        margin-left: 0;
+    }
+    #single-form h2 {
+        text-align: center;
+    }
+}
+
+div.container {
+    width: 80%;
+}
+
+div.container-1 {
+    width: 80%;
+    margin: 60px auto 0;
+}
+
+div.container-s {
+    width: 50%;
+    margin: 60px auto 0;
+}
+
+#contenidoTabla {
+    font-size: 12px;
+}
+
+td {
+    font-size: 12px;
+}
+
+th {
+    font-size: 12px;
+}

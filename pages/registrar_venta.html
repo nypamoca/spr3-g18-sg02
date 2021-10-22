@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.bootstrap5.min.css" />
+    <script src="https://kit.fontawesome.com/7f6300a61e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <title>Nueva Venta</title>
+</head>
+<header>
+
+</header>
+
+<body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold text-white" href="#">CONTROL INVENTARIO</a>
+            <a class="navbar-brand me-auto ms-lg-0 ms-3  justify-content-md-center fw-bold text-white">Registrar Factura de Venta</a>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="1_inicio.html" button class="btn btn-primary" type="button"><i class="bi bi-house-fill"></i></button></a>
+            </div>
+        </div>
+
+    </nav>
+    <div class="card-body">
+        <h3 class="top 3 mt-5 card-title"> </h3>
+    </div>
+    <!-- end top navigation bar -->
+    <div class="container mt-5">
+
+        <fieldset>
+
+            <h2>Detalles de la Factura de Venta</h2>
+            <hr>
+            <br />
+
+            <table cellspacing="0" cellpadding="0" width="100%">
+                <thead>
+                    <tr align="left">
+                        <th width=26%>Cliente</th>
+                        <th></th>
+                        <th>Fecha</th>
+                        <th>Factura No</th>
+                        <th>Agregar Productos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr align="left">
+
+                        <td><input type="text" id="cliente" name="cliente" tabindex="1" placeholder="Selecciona Cliente" size="40" required value=""></td>
+                        <td><a class="btn btn-primary" href="crear_cliente.html" role="button"><i class="bi bi-plus-circle"></i> Nuevo</a></td>
+                        <td><input type="date" id="fecha" name="fecha" tabindex="2" placeholder="Fecha" required value=""></td>
+                        <td>
+                            <input type="text" id="Factura" name="factura" tabindex="3 placeholder=" Numero factura " required value="125475 "></td>
+                        <td><a class="btn btn-primary " href="buscar_producto.html " role="button "><i class="bi bi-search "></i> Buscar Productos</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <br />
+            <table cellspacing="0 " cellpadding="0 " width="30% ">
+                <thead>
+                    <tr align="left ">
+                        <th widht=5%>Ingresa Codigo de Barras</th>
+                        <th widht=5%>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr align="left ">
+                        <td><input type="number " id="codigo " name="codigo " tabindex="2 " placeholder="Ingresa Codigo de Barras " required value="3957454 "></td>
+
+                        <td><input type="number " id="cantidad " name="cantidad " tabindex="1 " placeholder="Cantidad " size="10 " required value="1 "></td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <br />
+            <table cellspacing="0 " cellpadding="0 " width="90% ">
+                <thead>
+                    <tr align="left ">
+                        <th widht=5%>CODIGO</th>
+                        <th>DESCRIPCION</th>
+                        <th widht=5%>CANTIDAD</th>
+                        <th>DIAS GARANTIA</th>
+                        <th>% DE DESCUENTO</th>
+                        <th> PRECIO UNITARIO</th>
+                        <th> PRECIO TOTAL</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr align="left ">
+                        <td><input type="number " id="codigo " name="codigo " tabindex="1 " placeholder="Ingresa Codigo de Barras " required value="3957454 " size="10 "></td>
+                        <td><input type="text " id="nombre " name="nombre " tabindex="2 " placeholder=" " required value="Camara Hisense 1080 " size="40 " disabled></td>
+                        <td><input type="number " id="cantidad " name="cantidad " tabindex="3 " placeholder="Cantidad " size="6 " required value="1 "></td>
+                        <td><input type="garantia " id="garantia " name="garantia " tabindex="4 " placeholder=" " size="6 " required value="240 "></td>
+                        <td><input type="descuento " id="descuent " name="descuent " tabindex="5 " placeholder=" " size="6 " required value="0 "></td>
+                        <td><input type="number " id="preciounit " name="preciounit " tabindex="6 " placeholder=" " required value="900000.00 " disabled></td>
+                        <td><input align="right " type="number " id="preciototal " name="preciototal " tabindex="7 " placeholder=" " required value="900000.00 " disabled></td>
+                        <td><a href=" "><i class="bi bi-trash "></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/> 
+            <table border="1 " cellspacing="0 " cellpadding="2 " width="50% " <tr align="right ">
+                <th>Sub-Total</th>
+                <td>900,000.00</td>
+                </tr>
+                 <tr class="border-bottom ">
+                    <th>IVA</th>
+                    <td>0.00</td>
+                </tr>
+                 <tr class="border-bottom ">
+                    <th>TOTAL</th>
+                    <td>900,000.00</td>
+                </tr>
+            </table>
+        </fieldset>
+        <button class="btn btn-success " type="submit ">Guardar Factura</button>
+    </div>
+</body>
+
+</html>

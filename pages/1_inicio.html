@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <title>Sistema de Inventarios </title>
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+            </button>
+            <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#">CONTROL DE INVENTARIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar" aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="topNavBar">
+                <form class="d-flex ms-auto my-3 my-lg-0">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar" />
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-fill"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Editar Datos</a></li>
+                            <li><a class="dropdown-item" href="#">Cambiar Contraseña</a></li>
+                            <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- top navigation bar -->
+
+    <!-- offcanvas -->
+
+    <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
+        <div class="offcanvas-body p-0">
+            <nav class="navbar-dark">
+                <ul class="navbar-nav">
+                    <li>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2"><i class="bi bi-house"></i></span>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="my-4">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#inventarios">
+                            <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                            <span>Gestion de Inventario</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="inventarios">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="administrar_productos.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-inboxes-fill"></i></span>
+                                        <span>Productos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="administrar_marcas.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-tags-fill"></i></span>
+                                        <span>Marcas</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="administrar_categorias.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-inboxes-fill"></i></span>
+                                        <span>Categorias</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#contactos">
+                            <span class="me-2"><i class="bi bi-people"></i></span>
+                            <span>Contactos</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="contactos">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="administrar_clientes.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-person-lines-fill"></i></span>
+                                        <span>Clientes</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="administrar_proveedores.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-person-badge"></i></span>
+                                        <span>Proveedores</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#compras">
+                            <span class="me-2"><i class="bi bi-truck"></i></span>
+                            <span>Compras</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="compras">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="registrar_compra.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-cart-fill"></i></span>
+                                        <span>Registrar Compra</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="historial_compras.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-file-earmark-spreadsheet"></i></span>
+                                        <span>Historial Compras</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#ventas">
+                            <span class="me-2"><i class="bi bi-cash"></i></span>
+                            <span>Ventas</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="ventas">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="registrar_venta.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-cart-plus-fill"></i></span>
+                                        <span>Registrar Venta</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="historial_ventas.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-file-earmark-spreadsheet"></i></span>
+                                        <span>Historial Ventas</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="administrar_vendedores.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-person"></i></span>
+                                        <span>Vendedores</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="my-4">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#accesos">
+                            <span class="me-2"><i class="bi bi-lock"></i></span>
+                            <span>Administrar Accesos</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="accesos">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="administrar_perfiles.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-briefcase-fill"></i></span>
+                                        <span>Perfiles</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="administrar_usuarios.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-person-square"></i></span>
+                                        <span>Usuarios</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="mt-5 pt-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Panel de Control</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <div class="card bg-primary text-white h-100">
+                        <div class="card-body py-5">Inventario Neto</div>
+                        <div class="card-footer d-flex">
+                            Ver Detalles
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card bg-warning text-dark h-100">
+                        <div class="card-body py-5">Costos</div>
+                        <div class="card-footer d-flex">
+                            Ver Detalles
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card bg-success text-white h-100">
+                        <div class="card-body py-5">Ventas vs Costos</div>
+                        <div class="card-footer d-flex">
+                            Ver Detalles
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card bg-danger text-white h-100">
+                        <div class="card-body py-5">Compras</div>
+                        <div class="card-footer d-flex">
+                            Ver Detalles
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span> Grafica de Ejemplo
+                        </div>
+                        <div class="card-body">
+                            <canvas class="chart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span> Grafica de Ejemplo
+                        </div>
+                        <div class="card-body">
+                            <canvas class="chart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <span><i class="bi bi-table me-2"></i></span> Ultimas Ventas
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="example" class="table table-striped data-table" style="width: 100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Factura No</th>
+                                            <th>Cliente</th>
+                                            <th>Fecha</th>
+                                            <th>Total factura</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12345678</td>
+                                            <td>Clinica Palermo</td>
+                                            <td>2011/04/25</td>
+                                            <td>$3,208,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12345679</td>
+                                            <td>Contry Club Bogota</td>
+                                            <td>2011/07/25</td>
+                                            <td>$1,700,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12345680</td>
+                                            <td>Guillermo Sarmiento</td>
+                                            <td>2009/01/12</td>
+                                            <td>$860,000</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Factura No</th>
+                                            <th>Cliente</th>
+                                            <th>Fecha</th>
+                                            <th>Total factura</th>
+
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.5.1.js"></script>
+    <script src="../assets/js/jquery.dataTables.min.js"></script>
+    <script src="../assets//js/dataTables.bootstrap5.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

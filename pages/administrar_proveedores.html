@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.bootstrap5.min.css" />
+    <script src="https://kit.fontawesome.com/7f6300a61e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <title>Administrar Proveedores</title>
+</head>
+
+<header>
+
+</header>
+
+<body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold text-white" href="#">CONTROL DE INVENTARIOS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar" aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+            <div class="collapse navbar-collapse" id="topNavBar">
+                <div class="input-group d-grid gap-2 d-md-flex justify-content-md-center">
+                    <div class="form-outline">
+                        <input type="search" id="form1" size="60" class="form-control" placeholder="Buscar Por Nombre" />
+                    </div>
+                    <button type="button" class="btn btn-primary">
+              <i class="fas fa-search"></i>
+            </button>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="crear_proveedor.html" button class="btn btn-primary btn-lg me-md-2" type="button">+Nuevo</button></a>
+                    <a href="1_inicio.html" button class="btn btn-primary" type="button"><i class="bi bi-house-fill"></i></button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end top navigation bar -->
+
+    <!-- table -->
+    <div class="container-1 mt-5" id=contenidoTabla>
+        <div class="card-body">
+            <h3 class="top 3 mt-5 card-title">Listado de Proveedores</h3>
+        </div>
+        <table class="table table-borderless  table-striped table-responsive  card-1 p-4 ">
+            <thead>
+                <tr>
+                    <th>NIT</th>
+                    <th>Nombre Proveedor </th>
+                    <th>Telefono 1</th>
+
+
+                    <th>Departamento</th>
+                    <th>Sitio Web</th>
+                    <th>e-Mail Corporativo</th>
+
+                    <th>Nombre Contacto</th>
+                    <th>Telefono Contacto</th>
+                    <th>e-Mail contacto</th>
+
+                    <th>Tipo de proveedor</th>
+                    <th>Estado</th>
+                    <th>Fecha Creacion</th>
+
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <br>
+                <tr>
+                    <td>800600300</td>
+                    <td>Sony Colombia</td>
+                    <td>601 220 1111</td>
+
+
+                    <td>Bogota D.C</td>
+                    <td><a href="https://www.sony.com.co"><i class="bi bi-globe2"></i></a></td>
+                    <td><a href="mailto:serviciocliente@sony.com"><i class="bi bi-envelope"></i></a></td>
+
+                    <td>Maria Ramirez</td>
+                    <td>315 125 4230</td>
+                    <td><a href="mailto:mramirez@sony.com"><i class="bi bi-envelope"></i></a></td>
+
+                    <td>Persona Juridica</td>
+                    <td>Activo</td>
+                    <td>Mar-10-2021</td>
+                    <td><a href="editar_proveedor.html"><i class="bi bi-pencil-square text-primary"></i></a></td>
+
+                </tr>
+
+            </tbody>
+        </table>
+        <br />
+    </div>
+</body>
+
+</html>
